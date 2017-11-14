@@ -13,11 +13,13 @@ public class FolgeSpurBot {
                 robi.pickThing();
                 robi.move();
             }
+            // Zuerst versucht der Bot, die richtige Richtung zu erraten.
             robi.turnAround();
             robi.move();
             robi.turnLeft();
             robi.move();
 
+            // Falls das nicht funktioniert hat, kommt er so einfach auf die andere Seite.
             if (!robi.canPickThing()){
                 robi.turnAround();
                 robi.move(2);

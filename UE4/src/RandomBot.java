@@ -3,10 +3,12 @@ import java.util.Random;
 
 public class RandomBot {
     private RobotSE robi;
+    // Der Zufallsgenerator kann auch in der Methode zufallsschritt() initialisiert werden,
+    // so ist aber schon gleich einmal sichergestellt,
+    // dass sich beliebige RandomBots unabängig voneinander bewegen.
     private Random random = new Random();
 
     public RandomBot (RobotSE robi){
-        super();
         this.robi = robi;
 
     }
@@ -17,6 +19,8 @@ public class RandomBot {
         }
         robi.move();
     }
+    // Hier sind die nötigen Methoden aus der Klasse RobotSE neu implementiert,
+    // um auch zu wissen, wo sich die RandomBots aufhalten.
     public int getStreet(){
         return robi.getStreet();
     }

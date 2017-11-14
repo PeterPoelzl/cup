@@ -6,6 +6,8 @@ public class FlaechenSchaetzung {
         double summe = 0;
         for (int i = 1; i <= anzahlVersuche; i++){
             if (f.istImBereich(random.nextDouble(), random.nextDouble())){
+                // summe += 1 ist die Kurzschreibweise für summe = summe + 1
+                // und geht auch mit allen anderen Operatoren, zB *= oder %=
                 summe += 1;
             }
         }
